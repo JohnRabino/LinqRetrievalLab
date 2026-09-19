@@ -1,0 +1,99 @@
+@LinqRetrievalLab_HostAddress = https://localhost:7000
+
+GET {{LinqRetrievalLab_HostAddress}}/api/Product?page=1&size=5
+Accept: application/json
+
+###
+
+GET {{LinqRetrievalLab_HostAddress}}/api/Product/1
+Accept: application/json
+
+###
+
+GET {{LinqRetrievalLab_HostAddress}}/api/Product/category/1
+Accept: application/json
+
+###
+
+GET {{LinqRetrievalLab_HostAddress}}/api/Product/search?name=lap
+Accept: application/json
+
+###
+
+GET {{LinqRetrievalLab_HostAddress}}/api/Product/price?min=500&max=5000
+Accept: application/json
+
+###
+
+GET {{LinqRetrievalLab_HostAddress}}/api/Product/summary
+Accept: application/json
+
+###
+
+GET {{LinqRetrievalLab_HostAddress}}/api/Product/find/1
+Accept: application/json
+
+###
+
+GET {{LinqRetrievalLab_HostAddress}}/api/Product/unique/1
+Accept: application/json
+
+###
+
+GET {{LinqRetrievalLab_HostAddress}}/api/Category
+Accept: application/json
+
+###
+
+GET {{LinqRetrievalLab_HostAddress}}/api/Category/1
+Accept: application/json
+
+###
+
+POST {{LinqRetrievalLab_HostAddress}}/api/Category
+Content-Type: application/json
+
+{
+  "name": "Accessories"
+}
+
+###
+
+POST {{LinqRetrievalLab_HostAddress}}/api/Product
+Content-Type: application/json
+
+{
+  "name": "Headset",
+  "price": 2500,
+  "stock": 20,
+  "categoryId": 1
+}
+
+###
+
+PUT {{LinqRetrievalLab_HostAddress}}/api/Product/1
+Content-Type: application/json
+
+{
+  "name": "Gaming Laptop",
+  "price": 50000,
+  "stock": 8,
+  "categoryId": 1
+}
+
+###
+
+PUT {{LinqRetrievalLab_HostAddress}}/api/Category/1
+Content-Type: application/json
+
+{
+  "name": "Computer Electronics"
+}
+
+###
+
+DELETE {{LinqRetrievalLab_HostAddress}}/api/Product/7
+
+###
+
+DELETE {{LinqRetrievalLab_HostAddress}}/api/Category/3
